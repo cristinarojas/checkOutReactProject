@@ -12,10 +12,10 @@ const isProduction = process.env.NODE_ENV === 'production';
 // HtmlWebPackPlugin is to load the html code.
 const plugins = [
   new HtmlWebPackPlugin({
-    title: 'Asana pet adoption',
+    title: 'Check Out React Project',
     template: './src/index.html',
     filename: './index.html',
-    favicon:  './src/shared/images/pet.ico',
+    favicon:  './src/shared/images/checkout.png',
   })
 ];
 
