@@ -1,0 +1,17 @@
+{
+  "presets": [
+    "@babel/preset-env",
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    ["module-resolver", {
+      "root": ["./"],
+      "alias": {
+        "@components": "./src/components",
+        "@images": "./src/shared/images",
+        "@layout": "./src/shared/components/layout",
+        "@data": "./src/shared/data"
+      }
+    }]
+  ]
+}

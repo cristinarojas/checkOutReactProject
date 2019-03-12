@@ -1,0 +1,42 @@
+{
+  "name": "Check Out Project",
+  "version": "1.0.0",
+  "description": "Check Out Project with React",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development --open",
+    "start-production": "NODE_ENV=production webpack-dev-server --mode production --open",
+    "build-development": "webpack --mode development",
+    "build": "webpack --mode production"
+  },
+  "author": "Cristina Rojas",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "7.2.2",
+    "@babel/preset-env": "7.2.3",
+    "@babel/preset-react": "7.0.0",
+    "@babel/register": "7.0.0",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-loader": "8.0.5",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "css-loader": "2.1.0",
+    "file-loader": "^3.0.1",
+    "html-webpack-plugin": "3.2.0",
+    "install": "^0.12.2",
+    "mini-css-extract-plugin": "^0.5.0",
+    "node-sass": "4.11.0",
+    "npm": "^6.6.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "react": "16.7.0",
+    "react-dom": "16.7.0",
+    "react-helmet": "^5.2.0",
+    "react-lazy-load": "^3.0.13",
+    "sass-loader": "7.1.0",
+    "style-loader": "0.23.1",
+    "webpack": "4.19.0",
+    "webpack-bundle-analyzer": "^3.0.3",
+    "webpack-cli": "2.1.5",
+    "webpack-dev-server": "3.1.14",
+    "webpack-notifier": "^1.7.0"
+  }
+}
