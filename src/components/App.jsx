@@ -4,12 +4,14 @@ import Helmet from 'react-helmet';
 
 // Shared Components
 import Header from '@layout/Header/Header';
-import Footer from '@layout/Footer/Footer';
-import Content from '@layout/Content/Content';
+import Form from '@layout/userForm/userForm';
+
+// Styles
+import styles from './App.scss';
 
 // Main layout
 const App = props => (
-  <div>
+  <div className={styles.container}>
     {/* This Helmet will help us to manage the SEO on internet */}
     <Helmet
       title="Cristina Rojas"
@@ -26,8 +28,7 @@ const App = props => (
     />
 
     <Header />
-    <Content />
-    <Footer />
+    <Form />
   </div>
 );
 
