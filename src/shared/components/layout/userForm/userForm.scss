@@ -4,11 +4,17 @@
 // Content Text styles
 .containerForm {
   display: flex;
-  height: 55%;
+  height: auto;
   justify-content: center;
-  margin-top: 65px;
 
-  .signIn, .signUp {
+  .signUp {
+    font-size: 26px;
+    margin: 15px 0px 10px 25px;
+    text-align: left;
+    color: #a7a7a7;
+  }
+
+  .payment {
     font-size: 26px;
     margin: 15px 0px 10px 25px;
     text-align: left;
@@ -17,6 +23,10 @@
 
   .active {
     color: #219adb;
+  }
+
+  .inactive {
+    color: #a7a7a7;
   }
 
   .userForm {
