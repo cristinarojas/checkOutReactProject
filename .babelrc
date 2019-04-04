@@ -7,10 +7,12 @@
     ["module-resolver", {
       "root": ["./"],
       "alias": {
-        "@components": "./src/components",
+        "@app": "./src/app",
+        "@containers": "./src/containers",
         "@images": "./src/shared/images",
         "@layout": "./src/shared/components/layout",
-        "@data": "./src/shared/data"
+        "@data": "./src/shared/data",
+        "@shared": "./src/shared"
       }
     }]
   ]

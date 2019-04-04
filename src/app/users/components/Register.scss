@@ -1,5 +1,5 @@
 // This is a general style file - share different colors, sizes, etc.
-@import '../../../styles/generalStyles.scss';
+@import '../../../shared/styles/generalStyles.scss';
 
 // Content Text styles
 .containerForm {
@@ -29,11 +29,12 @@
     color: #a7a7a7;
   }
 
-  .userForm {
+  .theForm {
     width: 40%;
     border-radius: 10px;
     text-align: center;
     background-color: $white;
+    box-shadow: 0 6px 6px rgba(49, 49, 49, 0.54);
 
     .form {
       margin: 25px;

@@ -3,8 +3,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 
 // Shared Components
-import Header from '@layout/Header/Header';
-import Form from '@layout/userForm/userForm';
+import UsersContainer from './users/container';
 
 // Styles
 import styles from './App.scss';
@@ -27,8 +26,7 @@ const App = props => (
       ]}
     />
 
-    <Header />
-    <Form />
+    <UsersContainer />
   </div>
 );
 

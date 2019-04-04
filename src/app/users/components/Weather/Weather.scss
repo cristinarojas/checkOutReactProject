@@ -1,0 +1,51 @@
+// This is a general style file - share different colors, sizes, etc.
+@import '../../../../shared/styles/generalStyles.scss';
+
+.weatherContainer {
+  border: 1px solid white;
+  height: 300px;
+  width: 500px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+
+  h1 {
+    font-size: 18px;
+  }
+
+  .city {
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+
+    width: 90%;
+    border-radius: 5px;
+    border: 1px solid #e0e0e2;
+    height: 45px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  .submitCity {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+
+    background-color: #d4d01d;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+}

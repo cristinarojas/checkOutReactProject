@@ -1,0 +1,17 @@
+.selectStyle {
+  width: 190px;
+
+  input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+
+  select {
+      padding: 5px 8px;
+      width: 100%;
+      &:focus {
+          outline: none;
+      }
+  }
+}

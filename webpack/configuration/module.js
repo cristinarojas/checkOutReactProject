@@ -12,11 +12,13 @@ const rules = [
     use: 'babel-loader'
   },
   {
-    test: /\.(png|jpg|gif|jpeg)$/,
+    test: /\.(png|jpg|gif|svg)$/i,
     use: [
       {
-        loader: 'file-loader',
-        options: {}
+        loader: 'url-loader',
+        options: {
+          limit: 10000
+        }
       }
     ]
   }

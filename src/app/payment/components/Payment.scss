@@ -1,0 +1,55 @@
+// This is a general style file - share different colors, sizes, etc.
+@import '../../../shared/styles/generalStyles.scss';
+
+.cards {
+  width: 200px;
+}
+
+.form {
+  margin: 25px;
+
+  .data {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 15px;
+    border: 1px solid #e0e0e2;
+    margin-bottom: 30px;
+    height: 45px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+
+    &:first-child {
+      margin-top: 40px;
+    }
+
+    &:focus {
+      outline: 0;
+    }
+
+    &::placeholder {
+      color: #e0e0e9;
+    }
+  }
+
+  .save {
+    display: block;
+    background: linear-gradient(#235bd8, #1ea3d6);
+    width: 30%;
+    height: 35px;
+    border-radius: 15px;
+    color: $white;
+    margin: 0 auto;
+    font-weight: 200;
+    font-size: 16px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:focus {
+      outline: 0;
+    }
+  }
+}
