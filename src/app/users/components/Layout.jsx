@@ -14,7 +14,7 @@ const Layout = props => {
   return (
     <>
       <Header />
-      <Weather />
+      <Weather propOne="" propTwo="" title="Here the data that I want to send inside to this component tags html will use this data" />
     </>
   );
 };
