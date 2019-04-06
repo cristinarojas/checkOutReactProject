@@ -9,7 +9,6 @@ class Weather extends Component {
   constructor(props) { // If I want to use the prop object of this component I need to passing as a parameter.
     super(props); // If I want to use the prop object of this component I need to use super(props)
 
-    console.log('1 this.props->', this.props);
     this.state = {
       results: false,
       city: ''
@@ -29,15 +28,12 @@ class Weather extends Component {
   handleSubmit(e) {
     e.preventDefault();
     const { city } = this.state;
-    const apiKey = '6844b24412a14adf733d233afead26d8';
-    const apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${apiKey}`;
+    const { searchWeather } = this.props; // BECAUSE I HAVE THIS COMPONENT IN LAYOUT AND IM PASSING THE PROPS
 
-    fetch(apiUrl)
-      .then((response) => response.json())
-      .then((result) => {
-        console.log('result', result);
-      });
-
+    searchWeather(city); // CALLING MY ACTION CREATOR
+    this.setState({
+      city
+    });
   }
 
   // We could use arrow functions
@@ -49,12 +45,15 @@ class Weather extends Component {
 
   // Render Method
   render() {
+
     // obtaining title from this.props.
     const { // Im using destructuring to obtain title prop from the prop object of this component.
       title = 'Example of propTypes 1' // be default this title If im not passing nothing where I call this component <Weather title="passing data here" />
     } = this.props; // this is the prop object of this componet that will save all the data that we are receiving in <Weather title="" />
 
-    console.log('1.- this.props-->', this.props);
+    const { weather: { weather : { main } } } = this.props;
+
+    console.log('4 RENDER PAYLOAD-->', main);
 
     return(
       <>
@@ -75,10 +74,11 @@ class Weather extends Component {
           <section className={styles.weatherInfo}>
             <p>Searched results</p>
             {
-              this.state.results ?
+              main ?
               <>
-                <h2>Name of the city:</h2>
-                <p>Temperature:</p>
+                <h2>Name of the city: {this.state.city}</h2>
+                <p>Temperature: {main.temp}</p>
+                <p>Humidity: {main.humidity}</p>
               </>
               :
                 ''

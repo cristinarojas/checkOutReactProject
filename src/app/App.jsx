@@ -3,7 +3,8 @@ import React from 'react';
 import Helmet from 'react-helmet';
 
 // Shared Components
-import UsersContainer from './users/container';
+//import UsersContainer from './users/container';
+import WeatherContainer from './weather/container';
 
 // Styles
 import styles from './App.scss';
@@ -26,7 +27,7 @@ const App = props => (
       ]}
     />
 
-    <UsersContainer />
+    <WeatherContainer />
   </div>
 );
 

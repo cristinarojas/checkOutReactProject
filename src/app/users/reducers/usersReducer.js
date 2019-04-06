@@ -33,4 +33,4 @@ export default function usersReducer(state = initialState, action) {
     default:
       return state;
   }
-};
+}

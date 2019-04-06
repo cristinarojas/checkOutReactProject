@@ -1,0 +1,39 @@
+/*
+  1.- Tengo actions un archivo con el tipo de actions guardados en constantes
+
+  2.- Despues tengo un userActions donde incluyo el actionTypes anterior
+    aqui hago dispatch de mis actions dentro de los metodos (action Creators)
+    y tengo la libreria axios.
+
+  3.-Despues tengo un container donde importo mis metodos (actions Creators)
+    aqui utilizo bindActionCreators para unir todos los metodos (actions creators)
+    y los guardo en mapDispatchToProps.
+
+    tambien obtengo mapStateToProps para mapear el store de redux a los props
+
+    despues utilizo connect para conectar mapDispatchToProps y mapStateToProps
+
+  4.- Tengo una carpeta reducers para mis reducers, aqui importo mis constantes
+    de actionTypes, tengo la funcion reducer que recibe un
+    initial state y una action.
+
+    tengo un switch en el que selecciono el tipo de action que estoy pasando
+    y dentro obtengo un payload (const { payload: data } = action;) estoy
+    obteniendo el nodo payload y llamandolo data.
+
+    , tambien retorno otro metodo getNewState (que esta en utils) donde le paso data
+
+  5.- Tengo una carpeta shared/redux/reducers/index donde combino todos los reducers.
+
+  6.- Tengo un archivo llamado shared/redux/baseActions donde exporto
+    funciones las cuales retornan objetos que tienen nodos type y payload
+    { type: type,payload: payload }
+
+  7.- y tengo el configure store
+
+
+
+
+
+
+*/
