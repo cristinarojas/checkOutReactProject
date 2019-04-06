@@ -11,9 +11,10 @@ import Weather from './Weather/Weather';
 
 const Layout = props => {
   console.log('3 LAYOUT props--->', props);
+  // here also HEADER component will know the payload of the action Creator function of weather component.
   return (
     <>
-      <Header />
+      <Header {...props} />
       <Weather {...props} propOne="" propTwo="" title="Here the data that I want to send inside to this component tags html will use this data" />
     </>
   );

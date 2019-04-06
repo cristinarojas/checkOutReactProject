@@ -12,20 +12,23 @@ import Layout from '../components/Layout';
 
 // Here im importing the actions creators (functions that are used in the components)
 import {
- searchWeather
+ searchWeather,
+ showInfo
 } from '../actions/weatherActions';
 
 // INYECTA EL ESTADO DE REDUX A LAS PROPS DE MI COMPONENTE
 const mapStateToProps = ({ weather }) => {
   return {
-    weather: weather
+    weather: weather.weather,
+    show: weather.show
   }
 };
 
 // INYECTA EL DISPATCH A LOS ACTION CRETORS (FUNCIONES QUE UTILIZO EN MIS COMPONENTES)
 const mapDispatchToProps = dispatch => bindActionCreators(
   {
-    searchWeather
+    searchWeather,
+    showInfo
   },
   dispatch
 );

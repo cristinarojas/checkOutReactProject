@@ -7,7 +7,7 @@ import styles from './Header.scss';
 // Images
 import idea from './smartphone.svg';
 
-const Header = () => {
+const Header = (props) => {
   return (
     <header className={styles.siteHeader}>
       <Fragment>

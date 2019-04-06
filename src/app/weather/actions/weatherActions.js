@@ -3,6 +3,7 @@ import {
   SEARCH_WEATHER_REQUEST,
   SEARCH_WEATHER_SUCCESS,
   SEARCH_WEATHER_ERROR,
+  SHOW_INFO
 } from './actionTypes';
 
 // Consuming a service.
@@ -51,4 +52,9 @@ export const searchWeather = (city) => dispatch => {  // is a closure of bindAct
         console.log('AXIOS ERROR', err.response);
         dispatch(error(SEARCH_WEATHER_ERROR));
     });*/
+}
+
+export const showInfo = (show) => dispatch => {
+  console.log('1.- showInfo ACTION CREATOR', show)
+  dispatch(received(SHOW_INFO, show));
 }

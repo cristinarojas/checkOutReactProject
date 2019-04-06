@@ -3,7 +3,7 @@
 
 .weatherContainer {
   border: 1px solid white;
-  height: 450px;
+  height: 650px;
   width: 500px;
   display: block;
   margin: 0 auto;
@@ -52,5 +52,25 @@
   .weatherInfo {
     text-align: center;
     color: #d4d01d;
+    margin: 10px;
+    border-top: 1px solid #d4d01c;
+
+    .submitInfo {
+      display: block;
+      margin: 0 auto;
+      margin-top: 20px;
+
+      background-color: #14b729;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      cursor: pointer;
+
+      &:focus {
+        outline: 0;
+      }
+    }
+
   }
 }

@@ -5,6 +5,7 @@ import {
   SEARCH_WEATHER_REQUEST,
   SEARCH_WEATHER_SUCCESS,
   SEARCH_WEATHER_ERROR,
+  SHOW_INFO
 } from '../actions/actionTypes';
 
 // I need this method from utils getNewState
@@ -12,7 +13,8 @@ import { getNewState } from '@shared/utils/frontend';
 
 // Reducer function need initial state
 const initialState = {
-  weather: []
+  weather: [],
+  show: false
 };
 
 // Reducer function receive a initial state and the action
@@ -28,6 +30,15 @@ export default function weatherReducer(state = initialState, action) {
 
       return getNewState(state, {
         weather
+      });
+    }
+
+    case SHOW_INFO: {
+      const { payload: showPayload } = action; // action viene del ACTION CREATOR as action = {type: 'SHOW_INFO', payload: true }
+      console.log('2 REDUCER PAYLOAD', showPayload);
+
+      return getNewState(state, {
+        show: showPayload
       });
     }
 
