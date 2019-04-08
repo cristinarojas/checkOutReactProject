@@ -54,20 +54,25 @@ class Weather extends Component {
 
   // Render Method
   render() {
-
     // obtaining title from this.props.
-    const { // Im using destructuring to obtain title prop from the prop object of this component.
-      title = 'Example of propTypes 1' // be default this title If im not passing nothing where I call this component <Weather title="passing data here" />
-    } = this.props; // this is the prop object of this componet that will save all the data that we are receiving in <Weather title="" />
+    //const { // Im using destructuring to obtain title prop from the prop object of this component.
+      //title = 'Example of propTypes 1' // be default this title If im not passing nothing where I call this component <Weather title="passing data here" />
+    //} = this.props; // this is the prop object of this componet that will save all the data that we are receiving in <Weather title="" />
 
-    const { weather } = this.props;
+    const {
+      weather: {
+        main: {
+          temp = false
+        }
+      }
+    } = this.props;
 
-    console.log('4 RENDER PAYLOAD-->', weather);
+    console.log('4 RENDER PAYLOAD-->', temp);
 
     return(
       <>
         <div className={styles.weatherContainer}>
-          <h2>{title}</h2>
+
           <h1>Insert the city</h1>
           <form onSubmit={this.handleSubmit}>
             <input
@@ -82,7 +87,15 @@ class Weather extends Component {
 
           <section className={styles.weatherInfo}>
             <p>Searched results</p>
-
+            {
+               true ?
+               <>
+                <h2>Name of the city: {this.state.city}</h2>
+                 <input type="submit" value="showInfo" className={styles.submitInfo} onClick={this.handleShowInfo} />
+               </>
+               :
+                 ''
+             }
           </section>
         </div>
       </>

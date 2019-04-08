@@ -13,7 +13,9 @@ import { getNewState } from '@shared/utils/frontend';
 
 // Reducer function need initial state
 const initialState = {
-  weather: [],
+  weather: {
+    main: {}
+  },
   show: false
 };
 
